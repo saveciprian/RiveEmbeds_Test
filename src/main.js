@@ -8,22 +8,33 @@ class RiveAnimation {
 	 *
 	 * @param {string} artboardName
 	 * @param {string} path the url to the .riv file
-	 * @param {string} canvas the ID name of the canvas where you want the file to be placed
+	 * @param {string} parentDiv the ID name of the div where you want the canvas to be created
 	 * @param {boolean} [databinding=false] boolean value if the animation is using databinding or not
 	 * @param {number} [inputMode=Mode.Mouse] Mode.Mouse or Mode.Touch depending on input type; alternatively you can use 0 or 1
 	 */
 	constructor(
 		artboardName,
 		path,
-		canvas,
+		parentDiv,
 		databinding = false,
 		inputMode = Mode.Mouse
 	) {
 		this.artboardName = artboardName;
 		this.path = path;
-		this.canvasElement = document.getElementById(canvas);
+		this.parentDiv = document.getElementById(parentDiv);
+		this.createContainer();
+
 		this.databinding = databinding;
 		this.inputMode = inputMode;
+	}
+
+	createContainer() {
+		this.canvasElement = document.createElement("canvas");
+		this.canvasElement.style.width = "100%";
+		this.canvasElement.style.height = "100%";
+		this.canvasElement.classList.add("rive-canvas");
+
+		this.parentDiv.appendChild(this.canvasElement);
 	}
 
 	enable() {
