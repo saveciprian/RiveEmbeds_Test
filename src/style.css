@@ -1,0 +1,28 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.rive-animation{
+  width: 80%;
+  margin: 0 auto;
+  aspect-ratio: 1/1;
+  background-color: #F3F0EE;
+  /* height: 500px; */
+}
+
+.flex-vertical{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
