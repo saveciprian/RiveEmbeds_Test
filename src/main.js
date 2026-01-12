@@ -55,9 +55,7 @@ class RiveAnimation {
 
 				if (this.databinding) {
 					const vm = this.animation.viewModelByName("Settings");
-
 					const vmi = vm.instanceByIndex(this.inputMode);
-
 					this.animation.bindViewModelInstance(vmi);
 				}
 			},
@@ -87,6 +85,14 @@ class RiveAnimation {
 				case "StagnantsPopup":
 					console.log("StagnantsPopup");
 					break;
+				case "HoverIn":
+					console.log("HoverIn");
+					document.body.style.cursor = "pointer";
+					break;
+				case "HoverOut":
+					console.log("HoverOut");
+					document.body.style.cursor = "unset";
+					break;
 				default:
 					console.log(`${eventData.name} not accounted for`);
 			}
@@ -103,43 +109,43 @@ class RiveAnimation {
  */
 let desktop = new RiveAnimation(
 	"Desktop",
-	"/animations/emerging_profiles_6.riv",
+	"/animations/emerging_profiles_7.riv",
 	"app"
 ).enable();
 
 let tablet = new RiveAnimation(
 	"Tablet",
-	"/animations/emerging_profiles_6.riv",
+	"/animations/emerging_profiles_7.riv",
 	"tablet"
 ).enable();
 
 let mobile = new RiveAnimation(
 	"Mobile",
-	"/animations/emerging_profiles_6.riv",
+	"/animations/emerging_profiles_7.riv",
 	"mobile"
 ).enable();
 
 let sustain_desktop = new RiveAnimation(
 	"Desktop",
-	"/animations/sustainability_journey_5.riv",
+	"/animations/sustainability_journey_6.1.riv",
 	"sustain-desktop"
 ).enable();
 
 let sustain_tablet = new RiveAnimation(
 	"Tablet",
-	"/animations/sustainability_journey_5.riv",
+	"/animations/sustainability_journey_6.1.riv",
 	"sustain-tablet"
 ).enable();
 
 let sustain_mobile = new RiveAnimation(
 	"Mobile",
-	"/animations/sustainability_journey_5.riv",
+	"/animations/sustainability_journey_6.1.riv",
 	"sustain-mobile"
 ).enable();
 
 let circles_desktop = new RiveAnimation(
 	"Desktop",
-	"/animations/Circles_3.riv",
+	"/animations/circles_4.riv",
 	"circles-desktop",
 	true,
 	Mode.Mouse
@@ -147,7 +153,7 @@ let circles_desktop = new RiveAnimation(
 
 let circles_tablet = new RiveAnimation(
 	"Tablet",
-	"/animations/Circles_3.riv",
+	"/animations/circles_4.riv",
 	"circles-tablet",
 	true,
 	Mode.Touch
@@ -155,7 +161,7 @@ let circles_tablet = new RiveAnimation(
 
 let circles_mobile = new RiveAnimation(
 	"Mobile",
-	"/animations/Circles_3.riv",
+	"/animations/circles_4.riv",
 	"circles-mobile",
 	true,
 	Mode.Touch
