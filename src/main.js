@@ -68,7 +68,7 @@ class RiveAnimation {
 		});
 
 		window
-			.matchMedia(`(resolution: ${window.devicePixelRatio}dppx)`)
+			.matchMedia(`(resolution: ${window.devicePixelRatio * 2}dppx)`)
 			.addEventListener("change", this.computeSize);
 	}
 
